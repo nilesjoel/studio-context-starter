@@ -1,0 +1,74 @@
+import styled from 'styled-components'
+
+const Container = styled.div`
+  // padding: 0 0.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+  // height: max-content;
+  min-height: 100vh;
+`
+const Main = styled.main`
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // min-height: 100vh;
+`
+
+const Title = styled.h1`
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  text-align: center;
+  text-decoration: none;
+
+  a {
+    color: ${({ theme }) => theme.colors.secondary};
+    text-decoration: none;
+    &:hover,
+    :focus,
+    :active {
+      text-decoration: underline;
+    }
+  }
+`
+const Content = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin-top: 3rem;
+`
+const Segment = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+background: ${({ theme }) => theme.colors.background};
+
+`
+
+const Description = styled.div`
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.5rem;
+`
+const CodeTag = styled.code`
+  background: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.positive};
+  border-radius: 5px;
+  margin: 1rem 0.75rem;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+`
+
+export { Container, Main,Segment, Title, Description, Content, CodeTag }
